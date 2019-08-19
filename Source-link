@@ -1,3 +1,9 @@
 Here is the link:
 
 https://medium.com/retailmenot-engineering/building-a-high-throughput-data-pipeline-with-kinesis-lambda-and-dynamodb-7d78e992a02d
+
+
+We created a Kinesis stream capable of handling 1,000 events per second.
+We attached an event producer to the stream, demonstrating that we really can achieve that level of throughput quite easily.
+We configured a Lambda function and a DynamoDB table to process batches of events as they entered the Kinesis stream.
+We learned a detail about the contract between Kinesis and Lambda, which was slowing down processing, and found a quick workaround to get our system operating in real-time.
